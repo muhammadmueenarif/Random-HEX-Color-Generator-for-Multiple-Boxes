@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator of Multiple Boxes</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- there are two ways to do so. first i will give my own method and then we will do it by video method -->
+
+    <!-- Method 01 -->
+    <!-- <div class="container">
+        <div class="box" id="colorbox">
+            <h4 id="colorcode" class="colorcode"></h4>
+            <button onclick="copyCode(0)" id="copy" class="copy-btn">Copy</button>
+        </div>
+
+        <div class="box" id="colorbox">
+            <h4 id="colorcode" class="colorcode"></h4>
+            <button onclick="copyCode(1)" id="copy-btn" class="copy-btn">Copy</button>
+        </div>
+
+        <div class="box" id="colorbox">
+            <h4 id="colorcode" class="colorcode"></h4>
+            <button onclick="copyCode(2)" id="copy" class="copy-btn">Copy</button>
+        </div>
+
+        <div class="box" id="colorbox">
+            <h4 id="colorcode" class="colorcode"></h4>
+            <button onclick="copyCode(3)" id="copy-btn" class="copy-btn">Copy</button>
+        </div>
+
+    </div> -->
+
+    <!-- i am leaving css for now. -->
+
+    <!-- js -->
+    <!-- 
+        //for one box. on every refresh, it changes background color and shows color code in box.
+    // var red  = Math.floor(Math.random()*256);
+    // var green = Math.floor(Math.random()*256);
+    // var blue  = Math.floor(Math.random()*256);
+    // document.getElementsByClassName("box")[0].style.background = `rgb(${red}+${green}+${blue})`;   
+    // document.getElementById('colorcode').innerHTML = `rgb(${red},${green},${blue})`;
+
+// for multiple boxes with same class. change background color of every box on each refresh and show
+// code of each color in its box. 
+
+var boxes = document.getElementsByClassName('box');
+var btn = document.getElementsByClassName('copy-btn');
+ //store all color codes in array so we have all the color codes at the end.
+ var colorCodes = [];
+
+for(var i = 0; i < boxes.length; i++){
+    var red  = Math.floor(Math.random()*256);
+    var green = Math.floor(Math.random()*256);
+    var blue  = Math.floor(Math.random()*256);
+    document.getElementsByClassName('box')[i].style.background = `rgb(${red},${green},${blue})`;
+    document.getElementsByClassName('colorcode')[i].innerHTML = `rgb(${red},${green},${blue})`;
+   
+    colorCodes.push(`rgb(${red},${green},${blue})`);
+    }
+
+    console.log(colorCodes);
+    
+
+function copyCode(index){
+    navigator.clipboard.writeText(colorCodes[index]);
+    alert("Copied to clipboard!");
+}
+ -->
+
+
+
+
+            <!--Now, below is method two.  -->
+
+
+            <h1>Random Color Generator</h1>
+            <div class="container">
+                <!-- <div class="color-container">
+                    <span>#45dfff</span>
+                    <button>Copy</button>
+                </div> -->
+            </div>
+
+
+            <script src="script.js">
+            
+            </script>
+
+
+</body>
+
+</html>
